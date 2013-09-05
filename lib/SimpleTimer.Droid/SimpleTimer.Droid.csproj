@@ -13,7 +13,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AssemblyName>SimpleStorage.Droid</AssemblyName>
+    <AssemblyName>SimpleTimer.Droid</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,10 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="..\SimpleStorage.Shared\SimpleStorage.cs">
-      <Link>SimpleStorage.cs</Link>
+    <Compile Include="..\SimpleTimer.Shared\SimpleTimer.cs">
+      <Link>SimpleTimer.cs</Link>
     </Compile>
-    <Compile Include="DroidSimpleStorage.cs" />
+    <Compile Include="DroidSimpleTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
