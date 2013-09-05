@@ -8,9 +8,9 @@
     <ProjectGuid>{638A785D-0AF8-429A-9C16-675015A42113}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>SimpleStorage.iOS</RootNamespace>
+    <RootNamespace>SimpleTimer.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>SimpleStorage.iOS</AssemblyName>
+    <AssemblyName>SimpleTimer.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,9 +42,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="iOSSimpleStorage.cs" />
-    <Compile Include="..\SimpleStorage.Shared\SimpleStorage.cs">
-      <Link>SimpleStorage.cs</Link>
+    <Compile Include="iOSSimpleTimer.cs" />
+    <Compile Include="..\SimpleTimer.Shared\SimpleTimer.cs">
+      <Link>SimpleTimer.cs</Link>
     </Compile>
+    <Compile Include="ApplicationActivationListener.cs" />
   </ItemGroup>
 </Project>
