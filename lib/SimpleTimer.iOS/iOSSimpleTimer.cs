@@ -35,9 +35,12 @@ namespace PerpetualEngine
             templates = new List<TimerTemplate>();
             applicationActivationListener = new ApplicationActivationListener();
             applicationActivationListener.OnActivatedAction = () => {
-                RescheduleTimers(); };
+                TriggerTimerActions();
+                RescheduleTimers();
+            };
             applicationActivationListener.OnWillResignActiveAction = () => {
-                UnscheduleTimers(); };
+                UnscheduleTimers();
+            };
         }
 
         ~ iOSSimpleTimer()
@@ -90,6 +93,15 @@ namespace PerpetualEngine
         void ScheduleTimer(TimerTemplate template)
         {
             timers.Add(NSTimer.CreateRepeatingScheduledTimer(template.TimeSpan, new NSAction(template.Action)));
+        }
+
+        void TriggerTimerActions()
+        {
+            // work on copy of templates list
+            // we want to allow modification of templates in template action
+            foreach (var template in templates.ToArray()) {
+                template.Action();
+            }
         }
     }
 }
