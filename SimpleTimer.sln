@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTimer.iOS", "iOS\SimpleTimer.iOS.csproj", "{638A785D-0AF8-429A-9C16-675015A42113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTimer.Droid", "Droid\SimpleTimer.Droid.csproj", "{56CDDEA6-940E-411C-8F63-391B3BD5D437}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{D3631C8F-BA87-4E2A-BFA3-24CB23A98A27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Debug|x86.Build.0 = Debug|Any CPU
+		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Release|x86.ActiveCfg = Release|Any CPU
+		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Release|x86.Build.0 = Release|Any CPU
+		{638A785D-0AF8-429A-9C16-675015A42113}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{638A785D-0AF8-429A-9C16-675015A42113}.Debug|x86.Build.0 = Debug|Any CPU
+		{638A785D-0AF8-429A-9C16-675015A42113}.Release|x86.ActiveCfg = Release|Any CPU
+		{638A785D-0AF8-429A-9C16-675015A42113}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

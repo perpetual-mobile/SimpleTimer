@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+    <metadata>
+        <id>SimpleTimer</id>
+        <version>0.8</version>
+        <authors>Perpetual Mobile GmbH</authors>
+        <owners>Perpetual Mobile GmbH</owners>
+		<projectUrl>https://github.com/perpetual-mobile/SimpleTimer</projectUrl>
+        <licenseUrl>https://github.com/perpetual-mobile/SimpleStorage/blob/master/License.md</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Simple platform independent timer for iOS and Android (Xamarin)</description>
+        <copyright>Copyright 2015</copyright>
+        <tags>ios android xamarin timer</tags>
+    </metadata>
+    <files>
+        <file src="Droid/bin/Release/PerpetualEngine.SimpleStorage.Droid.dll" target="lib\MonoAndroid" />
+        <file src="iOS/bin/Release/PerpetualEngine.SimpleStorage.iOS.dll" target="lib\MonoTouch" />
+        <file src="iOS-Unified/bin/Release/PerpetualEngine.SimpleStorage.iOS-Unified.dll" target="lib\Xamarin.iOS10" />
+        <file src="Desktop/bin/Release/PerpetualEngine.SimpleStorage.Desktop.dll" target="lib\net45" />
+    </files>
+</package>

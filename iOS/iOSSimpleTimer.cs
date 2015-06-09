@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
-using MonoTouch.Foundation;
+using Foundation;
+using System.Threading.Tasks;
 
 namespace PerpetualEngine
 {
@@ -92,7 +93,7 @@ namespace PerpetualEngine
 
         void ScheduleTimer(TimerTemplate template)
         {
-            timers.Add(NSTimer.CreateRepeatingScheduledTimer(template.TimeSpan, new NSAction(template.Action)));
+            timers.Add(NSTimer.CreateRepeatingScheduledTimer(template.TimeSpan, new Action<NSTimer>((NSTimer arg) => template.Action())));
         }
 
         void TriggerTimerActions()
