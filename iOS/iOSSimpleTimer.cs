@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Foundation;
-using System.Threading.Tasks;
 
 namespace PerpetualEngine
 {
@@ -20,6 +19,8 @@ namespace PerpetualEngine
 
     public class iOSSimpleTimer : SimpleTimer
     {
+        public static bool UseApplicationActivationListener = true;
+
         struct TimerTemplate
         {
             public TimeSpan TimeSpan;
@@ -29,29 +30,36 @@ namespace PerpetualEngine
         List<NSTimer> timers;
         List<TimerTemplate> templates;
         ApplicationActivationListener applicationActivationListener;
+        bool running = false;
 
         public iOSSimpleTimer()
         {
             timers = new List<NSTimer>();
             templates = new List<TimerTemplate>();
-            applicationActivationListener = new ApplicationActivationListener();
-            applicationActivationListener.OnActivatedAction = () => {
-                TriggerTimerActions();
-                RescheduleTimers();
-            };
-            applicationActivationListener.OnWillResignActiveAction = () => {
-                UnscheduleTimers();
-            };
+            if (UseApplicationActivationListener) {
+                applicationActivationListener = new ApplicationActivationListener();
+                applicationActivationListener.OnActivatedAction = () => {
+                    TriggerTimerActions();
+                    RescheduleTimers();
+                };
+                applicationActivationListener.OnWillResignActiveAction = () => {
+                    UnscheduleTimers();
+                };
+            }
         }
 
         ~ iOSSimpleTimer()
         {
-            applicationActivationListener.ClearActions();
+            if (UseApplicationActivationListener)
+                applicationActivationListener.ClearActions();
         }
 
         /// <summary>calls the given action with the given time span as long as the App is visible on the screen.</summary>
-        public override void Repeat(TimeSpan timeSpan, Action action)
+        public override void Repeat(TimeSpan timeSpan, Action action, bool immediate = false)
         {
+            running = true;
+            if (immediate)
+                action();
             TimerTemplate template;
             template.TimeSpan = timeSpan;
             template.Action = action;
@@ -63,6 +71,17 @@ namespace PerpetualEngine
         {
             UnscheduleTimers();
             ClearTemplates();
+            running = false;
+        }
+
+        public override bool IsRunning()
+        {
+            return running;
+        }
+
+        public override void DisableAutomaticBackgroundHandling()
+        {
+            applicationActivationListener.ClearActions();
         }
 
         void UnscheduleTimers()
