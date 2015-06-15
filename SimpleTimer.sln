@@ -7,12 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTimer.Droid", "Droid\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{D3631C8F-BA87-4E2A-BFA3-24CB23A98A27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTimer.Desktop", "Desktop\SimpleTimer.Desktop.csproj", "{17F01F3F-026D-4055-B8F5-3D313468C671}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17F01F3F-026D-4055-B8F5-3D313468C671}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{17F01F3F-026D-4055-B8F5-3D313468C671}.Debug|x86.Build.0 = Debug|Any CPU
+		{17F01F3F-026D-4055-B8F5-3D313468C671}.Release|x86.ActiveCfg = Release|Any CPU
+		{17F01F3F-026D-4055-B8F5-3D313468C671}.Release|x86.Build.0 = Release|Any CPU
 		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Debug|x86.Build.0 = Debug|Any CPU
 		{56CDDEA6-940E-411C-8F63-391B3BD5D437}.Release|x86.ActiveCfg = Release|Any CPU

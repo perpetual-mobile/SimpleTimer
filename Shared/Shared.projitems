@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)SimpleTimer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TimeSpanAwaiter.cs" />
   </ItemGroup>
 </Project>

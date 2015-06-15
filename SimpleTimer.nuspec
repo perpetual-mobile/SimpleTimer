@@ -2,7 +2,7 @@
 <package >
     <metadata>
         <id>SimpleTimer</id>
-        <version>0.9</version>
+        <version>0.92</version>
         <authors>Perpetual Mobile GmbH</authors>
         <owners>Perpetual Mobile GmbH</owners>
 		<projectUrl>https://github.com/perpetual-mobile/SimpleTimer</projectUrl>
@@ -15,5 +15,6 @@
     <files>
         <file src="Droid/bin/Release/SimpleTimer.Droid.dll" target="lib\MonoAndroid" />
         <file src="iOS/bin/Release/SimpleTimer.iOS.dll" target="lib\Xamarin.iOS10" />
+        <file src="Desktop/bin/Release/SimpleTimer.Desktop.dll" target="lib\net45" />
     </files>
 </package>
