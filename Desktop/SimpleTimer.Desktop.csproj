@@ -6,7 +6,7 @@
     <ProjectGuid>{17F01F3F-026D-4055-B8F5-3D313468C671}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Desktop</RootNamespace>
-    <AssemblyName>Desktop</AssemblyName>
+    <AssemblyName>SimpleTimer.Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
