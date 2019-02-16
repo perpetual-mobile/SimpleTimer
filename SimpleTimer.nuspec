@@ -2,7 +2,7 @@
 <package >
     <metadata>
         <id>SimpleTimer</id>
-        <version>0.93</version>
+        <version>0.94</version>
         <authors>Perpetual Mobile GmbH</authors>
         <owners>Perpetual Mobile GmbH</owners>
 		<projectUrl>https://github.com/perpetual-mobile/SimpleTimer</projectUrl>
