@@ -18,6 +18,7 @@ namespace PerpetualEngine
 
         public override void Repeat(TimeSpan timeSpan, Action action, bool immediate = false)
         {
+            running = true;
             if (immediate)
                 action();
             RepeatAsync(timeSpan, action);
@@ -25,7 +26,6 @@ namespace PerpetualEngine
 
         async void RepeatAsync(TimeSpan timeSpan, Action action)
         {
-            running = true;
             while (running) {
                 await timeSpan;
                 if (running) {
